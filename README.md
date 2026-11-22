@@ -24,8 +24,11 @@ node main.ts
 ## Validation
 
 - Practice set: 3/3 byte-identical to the reference answers.
-- Differential fuzz vs the oracle (makefun-site 1.0.0): 300 cases, 0
-  mismatches (a further 702-case batch was running at submit time).
+- Differential fuzz vs the oracle (makefun-site 1.0.0): 1,002 cases drawn
+  with the kit's own generator on fresh seeds, 0 mismatches; plus 25
+  hand-crafted edge cases (elif chains, malformed templates, slug
+  collisions, reserved directories, static shadowing, reading-time
+  boundaries, date edges), 0 mismatches.
 - Speed on the practice set, steady state, same machine: ~200 ms total
   CPU vs ~680 ms for the oracle — about 3.4x faster.
 
